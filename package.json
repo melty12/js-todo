@@ -1,0 +1,22 @@
+{
+  "name": "js-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melty12/js-todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melty12/js-todo/issues"
+  },
+  "homepage": "https://github.com/melty12/js-todo#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}
