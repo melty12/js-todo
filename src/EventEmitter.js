@@ -1,6 +1,6 @@
 export class EventEmitter {
   constructor() {
-    this._listerner = new Map();
+    this._listeners = new Map();
   }
 
   /**
@@ -9,10 +9,10 @@ export class EventEmitter {
    * @param {Function} listener イベントリスナー
    */
   addEventListener(type, listener) {
-    if (!this._listerner.has(type)) {
-      this._listerner.set(type, new Set());
+    if (!this._listeners.has(type)) {
+      this._listeners.set(type, new Set());
     }
-    const listenerSet = this._listerner.get(type);
+    const listenerSet = this._listeners.get(type);
     listenerSet.add(listener);
   }
 
@@ -21,7 +21,7 @@ export class EventEmitter {
    * @param {string} type イベント名
    */
   emit(type) {
-    const listenerSet = this._listerners.get(type);
+    const listenerSet = this._listeners.get(type);
     if (!listenerSet) {
       return;
     }

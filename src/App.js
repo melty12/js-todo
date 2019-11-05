@@ -17,7 +17,7 @@ export class App {
       const todoItems = this.todoListModel.getTodoItems();
       todoItems.forEach(item => {
         const todoItemElement = element`<li>${item.title}</li>;`;
-        this.todoListElement.appendChild(todoItemElement);
+        todoListElement.appendChild(todoItemElement);
       });
 
       render(todoListElement, containerElement);
